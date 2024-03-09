@@ -4,16 +4,19 @@ export default {
 	theme  : {
 		extend: {
 			colors: {
-				white: '#E2E8F0',
-				grey: '#A2ACC5',
-				blue: '#38BDF8',
-				darkblue: '#0B0F25'
+				white   : '#e2e8f0',
+				grey    : '#a2acc5',
+				blue    : '#38bdf8',
+				darkblue: '#0b0f25'
 			},
 		},
 
 		screens: {
-			mobile: { max: '1024px' },
-			desktop: { min: '1024px' }
+			sm   : "640px",
+			md   : "768px",
+			lg   : "1024px",
+			xl   : "1280px",
+			"2xl": "1536px"
 		},
 	},
 	plugins: [],

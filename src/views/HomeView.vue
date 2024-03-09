@@ -5,16 +5,16 @@
 <template>
 
 	<div class="flex flex-col">
-		<section class="flex flex-row-reverse justify-between items-start pt-[180px]">
+		<section class="flex flex-row-reverse justify-between items-start pt-[180px] max-[900px]:flex-col">
 
-			<figure class="relative w-[36%] mt-[8px] overflow-hidden rounded-[15px] *:hover:opacity-80">
-				<img class="w-full h-auto" alt="" src="@/assets/testimg.png"/>
-				<button class="absolute inset-0 *:hover:scale-110">
-					<img class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" alt="" src="@/assets/play.svg"/>
+			<figure class="cursor-pointer w-[36%] mt-[8px] max-[900px]:w-full max-[900px]:mb-[40px] ">
+				<img alt="" src="@/assets/testimg.png"/>
+				<button>
+					<img alt="" src="@/assets/play.svg"/>
 				</button>
 			</figure>
 
-			<div class="flex flex-col w-[calc(64%-70px)]">
+			<div class="flex flex-col w-[calc(64%-70px)] max-[900px]:w-full">
 
 				<h1>Ledge Slab Shader</h1>
 
@@ -47,52 +47,78 @@
 
 		<hr/>
 
-		<section class="textures">
+		<section class="textures flex justify-between">
 			<div class="box">
 				<h3>
 					<span>UV0</span>
-					- Base Texture
+					Base Texture
 				</h3>
 				<figure>
 					<img alt="" src="@/assets/testimg.png"/>
 				</figure>
-				<a>Copy to clipboard</a>
+				<p><strong>Base_Textures</strong> <span>/</span></p>
 			</div>
 
 			<div class="box">
 				<h3>
 					<span>UV2</span>
-					- Grout Lines
+					Grout Lines
 				</h3>
 				<figure>
 					<img alt="" src="@/assets/testimg.png"/>
 				</figure>
-				<a>Copy to clipboard</a>
+				<p><strong>_Textures</strong> <span>/</span> Ledge Slabs</p>
 			</div>
 
 			<div class="box">
 				<h3>
 					<span>UV3</span>
-					- Wax Marks
+					Wax Marks
 				</h3>
 				<figure>
 					<img alt="" src="@/assets/testimg.png"/>
 				</figure>
-				<a>Copy to clipboard</a>
+				<p><strong>_Textures</strong> <span>/</span> Grind Marks</p>
 			</div>
 
 			<div class="box">
 				<h3>
 					<span>Triplanar</span>
-					- Dirt Overlay
+					Dirt
 				</h3>
 				<figure>
 					<img alt="" src="@/assets/testimg.png"/>
 				</figure>
-				<a>Copy to clipboard</a>
+				<p><strong>_Textures</strong> <span>/</span> Dirt</p>
 			</div>
 		</section>
 
 	</div>
 
 </template>
+
+<style scoped>
+	.box {
+		@apply w-[21%];
+
+		h3 span {
+			@apply text-blue font-medium pr-[8px];
+		}
+		
+		figure {
+			@apply my-[15px];
+		}
+		
+		p, a {
+			@apply text-grey flex;
+			
+			strong {
+				@apply text-white;
+			}
+			
+			span {
+				@apply px-[6px] opacity-35 font-medium;
+			}
+		}
+	}
+</style>

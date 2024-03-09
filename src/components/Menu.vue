@@ -4,6 +4,14 @@
 <template>
 
 	<nav>
+		
+		<p>Introduction</p>
+		<div>
+			<a><span>Getting Started</span></a>
+			<a><span>Object Sizes</span></a>
+			<a><span>Contributing</span></a>
+		</div>
+		
 		<p>Shader Materials</p>
 		<div>
 			<a><span>Ultimate Trim v2</span></a>
@@ -22,12 +30,6 @@
 			<a><span>Material Usage</span></a>
 		</div>
 
-		<p>Introduction</p>
-		<div>
-			<a><span>Getting Started</span></a>
-			<a><span>Object Sizes</span></a>
-			<a><span>Contributing</span></a>
-		</div>
 	</nav>
 	
 </template>
