@@ -1,0 +1,130 @@
+@import './base.css';
+
+body {
+	@apply text-white bg-gradient-to-b from-darkblue to-black;
+	background-attachment : fixed;
+}
+
+a, button, a span, button span, button img, figure img {
+	cursor     : pointer;
+	outline    : 0;
+	transition : all .3s;
+}
+
+#app {
+	@apply flex justify-center w-full h-svh relative overflow-hidden h-auto w-full;
+}
+
+#app:before {
+	content       : '';
+	position      : absolute;
+	top           : -100px;
+	right         : 30%;
+	width         : 280px;
+	height        : 80px;
+	background    : radial-gradient(45.39% 45.39% at 50% 50%, rgba(175, 56, 248, .87) 0, rgba(175, 56, 248, .83) 15.62%, rgba(175, 56, 248, 0) 100%);
+	border-radius : 100px;
+	transform     : scale(6) rotate(40deg);
+	opacity       : .1;
+	z-index       : -1;
+}
+
+#app:after {
+	content       : '';
+	position      : absolute;
+	top           : 200px;
+	right         : 25%;
+	width         : 280px;
+	height        : 80px;
+	background    : radial-gradient(45.39% 45.39% at 50% 50%, rgba(56, 167, 248, .87) 0, rgba(56, 167, 248, .83) 15.62%, rgba(56, 167, 248, 0) 100%);
+	border-radius : 100px;
+	transform     : scale(6) rotate(40deg);
+	opacity       : .1;
+	z-index       : -1;
+}
+
+.app-wrap {
+	position : relative;
+}
+
+.app-wrap:after {
+	content       : '';
+	position      : absolute;
+	top           : 200px;
+	right         : 30%;
+	width         : 400px;
+	height        : 160px;
+	background    : radial-gradient(45.39% 45.39% at 50% 50%, rgba(56, 248, 213, .87) 0, rgba(56, 248, 213, .83) 15.62%, rgba(56, 248, 213, 0) 100%);
+	border-radius : 100px;
+	transform     : scale(7) rotate(40deg);
+	opacity       : .06;
+	z-index       : -1;
+}
+
+
+h1, .h1 {
+	@apply text-[29px] font-extrabold text-white;
+}
+
+h2, .h2 {
+	@apply text-[23px] font-extrabold text-white;
+}
+
+h3, .h3 {
+	@apply text-[18px] font-bold text-white;
+}
+
+h4, .h4 {
+	@apply text-[18px] font-medium text-grey;
+}
+
+h5, .h5 {
+	@apply text-[14px] font-medium text-grey;
+}
+
+p, .p {
+	@apply text-[16px] font-medium text-white;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+	line-height:170%;
+	margin : 8px 0;
+	display : flex;
+
+	&:first-child {
+		margin-top:0;
+	}
+}
+
+ul {
+	margin:18px 0 40px;
+
+	&:last-child {
+		 margin-bottom : 0;
+	}
+}
+
+h2 + ul {
+	margin-top:5px;
+}
+
+hr {
+	border-color : rgba(199, 213, 255, .05);
+	margin       : 45px 0;
+}
+
+ul {
+	flex-direction: column;
+}
+ul.horizontal {
+	flex-direction: row;
+}
+
+ul li {
+	@apply font-medium text-[16px] text-white pl-[32px] mr-[60px] py-[4px];
+	background: url(./check.svg) left center no-repeat;
+
+	span {
+		@apply text-grey;
+	}
+}
